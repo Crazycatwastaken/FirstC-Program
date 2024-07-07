@@ -8,23 +8,24 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter Your name: ");
-            string name = Console.ReadLine();
+            Console.WriteLine("Enter the first Number: ");
+            int NumberA = Convert.ToInt32(Console.ReadLine());
             
-            
-            Console.Write("Enter Your age: ");
-            string ageInput = Console.ReadLine();
-            int age = Convert.ToInt32(ageInput);
-            
-            Console.WriteLine("Your Name is " + name + " and you're " + age + " years old ");
+            Console.WriteLine("Enter the Second Number: ");
+            int NumberB = Convert.ToInt32(Console.ReadLine());
 
-            if (age >= 18)
+            int answer = NumberA * NumberB;
+            Console.WriteLine("Value of " + NumberA + " x " + NumberB + ": ");
+            string answerInput = Console.ReadLine();
+            int actualAnswer = Convert.ToInt32(answerInput);
+
+            if (answer == actualAnswer)
             {
-                Console.WriteLine("You're 18 or older");
+                Console.WriteLine("You're correct");
             }
             else
             {
-                Console.WriteLine("You're under 18");
+                Console.WriteLine("You're incorrect");
             }
             
             Console.ReadLine();
