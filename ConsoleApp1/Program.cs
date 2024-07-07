@@ -4,7 +4,7 @@ using System.Threading.Channels;
 
 namespace ConsoleApp1
 {
-    class mathProgram
+    class Program
     {
         static void Main(string[] args)
         {
