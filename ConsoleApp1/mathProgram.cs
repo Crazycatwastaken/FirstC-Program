@@ -4,7 +4,7 @@ using System.Threading.Channels;
 
 namespace ConsoleApp1
 {
-    class Program
+    class mathProgram
     {
         static void Main(string[] args)
         {
@@ -30,8 +30,6 @@ namespace ConsoleApp1
                     Console.WriteLine("You're incorrect");
                 }
             }
-
-            
 
             Console.WriteLine("You're Correct!");
             
