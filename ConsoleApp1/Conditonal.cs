@@ -1,3 +1,4 @@
-﻿int age = -10;
+﻿int age = 10;
 
-Console.WriteLine(age);
+string result = age >= 0 ? "Valid" : "Invalid";
+Console.WriteLine(result);
