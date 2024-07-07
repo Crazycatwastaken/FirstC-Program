@@ -8,25 +8,34 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the first Number: ");
+            Console.Write("Enter the first Number: ");
             int NumberA = Convert.ToInt32(Console.ReadLine());
             
-            Console.WriteLine("Enter the Second Number: ");
+            Console.Write("Enter the Second Number: ");
             int NumberB = Convert.ToInt32(Console.ReadLine());
 
             int answer = NumberA * NumberB;
-            Console.WriteLine("Value of " + NumberA + " x " + NumberB + ": ");
-            string answerInput = Console.ReadLine();
-            int actualAnswer = Convert.ToInt32(answerInput);
+            int actualAnswer = 0;
+            Console.WriteLine("Whats the value of " + NumberA + " x " + NumberB + "?");
+            Console.WriteLine();
+    
+            while (answer != actualAnswer)
+            {
+                Console.Write("Enter your Answer: ");
+                string answerInput = Console.ReadLine();
+                actualAnswer = Convert.ToInt32(answerInput);
 
-            if (answer == actualAnswer)
-            {
-                Console.WriteLine("You're correct");
+                if (answer != actualAnswer)
+                {
+                    Console.WriteLine("You're incorrect");
+                }
             }
-            else
-            {
-                Console.WriteLine("You're incorrect");
-            }
+
+            
+
+            Console.WriteLine("You're Correct!");
+            
+
             
             Console.ReadLine();
             
