@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.Globalization;
 using System.Threading.Channels;
 
 namespace ConsoleApp1
@@ -8,33 +9,21 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter the first Number: ");
-            int NumberA = Convert.ToInt32(Console.ReadLine());
-            
-            Console.Write("Enter the Second Number: ");
-            int NumberB = Convert.ToInt32(Console.ReadLine());
+            double value = 1000D / 12.34D;
+            Console.WriteLine(value);
+            Console.WriteLine(string.Format("{0:0.0}", value));
+            Console.WriteLine(string.Format("{0:0.00}", value));
 
-            int answer = NumberA * NumberB;
-            int actualAnswer = 0;
-            Console.WriteLine("Whats the value of " + NumberA + " x " + NumberB + "?");
-            Console.WriteLine();
-    
-            while (answer != actualAnswer)
-            {
-                Console.Write("Enter your Answer: ");
-                string answerInput = Console.ReadLine();
-                actualAnswer = Convert.ToInt32(answerInput);
+            double money = -10D / 3D;
+            Console.WriteLine(string.Format("-$10 / $3 = ${0:0.00}", money));
+            Console.WriteLine(money.ToString("C"));
+            Console.WriteLine(money.ToString("C1"));
+            Console.WriteLine(money.ToString("C2"));
 
-                if (answer != actualAnswer)
-                {
-                    Console.WriteLine("You're incorrect");
-                }
-            }
-
-            Console.WriteLine("You're Correct!");
-            
-
-            
+            Console.WriteLine(money.ToString("C", CultureInfo.CurrentCulture));
+            Console.WriteLine(money.ToString("C", CultureInfo.CreateSpecificCulture("en-GB")));
+            Console.WriteLine(money.ToString("C", CultureInfo.CreateSpecificCulture("en-US")));
+            Console.WriteLine(money.ToString("C", CultureInfo.CreateSpecificCulture("en-JP")));
             Console.ReadLine();
             
         }
