@@ -6,21 +6,15 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter a number: ");
-            string numInput = Console.ReadLine();
-            int num = 0;
-
-            bool success = int.TryParse(numInput, out num);
-            if (success)
+            Console.Write("What number would you like for the times table: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            int i = 0;
+            while (i < 10)
             {
-                Console.WriteLine(num);
+                i++;
+                int multiplication = number * i;
+                Console.WriteLine(number + " times " + i + " = " + multiplication);
             }
-            else
-            {
-                Console.WriteLine("Unable to convert number.");
-            }
-            
-            
             Console.ReadLine();
         }
         
