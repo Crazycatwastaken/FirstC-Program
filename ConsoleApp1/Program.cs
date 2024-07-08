@@ -6,14 +6,28 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.Write("What number would you like for the times table: ");
-            int number = Convert.ToInt32(Console.ReadLine());
             int i = 0;
-            while (i < 10)
+
+            while (i < 100)
             {
                 i++;
-                int multiplication = number * i;
-                Console.WriteLine(number + " times " + i + " = " + multiplication);
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    Console.WriteLine("FizzBuzz");
+                } 
+                else if (i % 3 == 0)
+                {
+                    Console.WriteLine("Fizz");
+                }
+                
+                else if (i % 5 == 0)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                }
             }
             Console.ReadLine();
         }
