@@ -6,18 +6,30 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter your name: ");  
-            string name = Console.ReadLine();
+            string message = "Hello";
+            string compare = "Hello";
 
-            if (name != string.Empty) // Better then "" as " " is wrong.
-            { 
+            if (message.Equals(compare)) // Better then == 
+            {
+                Console.WriteLine("Same");
+            }
+            else
+            {
+                Console.WriteLine("Diff");
+            }
+
+            Console.Write("Your name: ");
+            string name = Console.ReadLine();
+            
+            //if (name != "")
+            if (!name.Equals(""))
+            {
                 Console.WriteLine($"Your name is {name}");
             }
             else
             {
-                Console.WriteLine("Error your name is empty");
+                Console.WriteLine("Error");
             }
-            
             
             Console.ReadLine();
         }
