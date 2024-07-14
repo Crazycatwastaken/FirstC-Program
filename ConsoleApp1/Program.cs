@@ -12,7 +12,10 @@ namespace ConsoleApp1
            
             Console.WriteLine("Your name is " + name + " and your age is " + age);
             Console.WriteLine($"Your name is {name} and your {age} is age");
-          
+
+            // Slightly better then + but still looks bad
+            string test = string.Concat("Yor name is ", name, " and your age is ", age);
+            Console.WriteLine(test);
             Console.ReadLine();
         }
         
