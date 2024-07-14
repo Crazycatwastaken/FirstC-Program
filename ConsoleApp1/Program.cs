@@ -21,6 +21,7 @@ namespace ConsoleApp1
             for (int j = 0; j < message.Length; j++)
             {
                 Console.Write(message[j]);
+                Thread.Sleep(250);
             }
 
             Console.WriteLine();
