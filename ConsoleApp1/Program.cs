@@ -6,16 +6,19 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            string name = "Max";
-            int age = 18;
+            Console.Write("Enter your name: ");  
+            string name = Console.ReadLine();
 
-           
-            Console.WriteLine("Your name is " + name + " and your age is " + age);
-            Console.WriteLine($"Your name is {name} and your {age} is age");
-
-            // Slightly better then + but still looks bad
-            string test = string.Concat("Yor name is ", name, " and your age is ", age);
-            Console.WriteLine(test);
+            if (name != string.Empty) // Better then "" as " " is wrong.
+            { 
+                Console.WriteLine($"Your name is {name}");
+            }
+            else
+            {
+                Console.WriteLine("Error your name is empty");
+            }
+            
+            
             Console.ReadLine();
         }
         
