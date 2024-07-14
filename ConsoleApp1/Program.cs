@@ -6,17 +6,19 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            string path = "C:\\Users\\maxra\\Pictures\\Camera";
-            Console.WriteLine(path);
-            // Same as \\ but without escape char with @
-            path = @"C:\Users\maxra\Pictures\Camera";
-            Console.WriteLine(path);
+            string name = "Max";
+            int age = 18;
 
-            string name = "Hello \"something\"";
-            Console.WriteLine(name);
+            Console.WriteLine("Name: " + name);
+            Console.WriteLine("Age: " + age);
+
+            Console.WriteLine();
+            Console.WriteLine("Name: " + name + "\nAge: " + age);
+            Console.WriteLine("Your name is " + name + " and your age is " + age);
+            // , adds an object to replace {0/1}
+            Console.WriteLine("Your name is {0}, and your age is {1}", name, age);
+            Console.WriteLine("Name: {0}\nAge: {1}", name, age);
             
-            name = @"Hello ""something""";
-            Console.WriteLine(name);
             Console.ReadLine();
         }
         
