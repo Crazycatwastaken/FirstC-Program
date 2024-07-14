@@ -6,31 +6,30 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            string message = "Hello";
-            string compare = "Hello";
+            string message = "C# is awesome";
 
-            if (message.Equals(compare)) // Better then == 
+            Console.WriteLine(message[0]); // Returns C
+
+            int i = 0;
+            while (i < message.Length)
             {
-                Console.WriteLine("Same");
-            }
-            else
-            {
-                Console.WriteLine("Diff");
+                Console.Write(message[i]);
+                i++;
             }
 
-            Console.Write("Your name: ");
-            string name = Console.ReadLine();
-            
-            //if (name != "")
-            if (!name.Equals(""))
+            Console.WriteLine();
+            for (int j = 0; j < message.Length; j++)
             {
-                Console.WriteLine($"Your name is {name}");
+                Console.Write(message[j]);
             }
-            else
+
+            Console.WriteLine();
+            foreach (char character in message)
             {
-                Console.WriteLine("Error");
+                Console.Write(character);
             }
-            
+
+
             Console.ReadLine();
         }
         
