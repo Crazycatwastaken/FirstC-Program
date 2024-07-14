@@ -10,18 +10,18 @@ namespace ConsoleApp1
 
             Console.WriteLine(message[0]); // Returns C
 
-            int i = 0;
-            while (i < message.Length)
-            {
-                Console.Write(message[i]);
-                i++;
-            }
+            // int i = 0;
+            // while (i < message.Length)
+            // {
+            //     Console.Write(message[i]);
+            //     i++;
+            // }
 
             Console.WriteLine();
             for (int j = 0; j < message.Length; j++)
             {
                 Console.Write(message[j]);
-                Thread.Sleep(250);
+                Thread.Sleep(50);
             }
 
             Console.WriteLine();
@@ -29,6 +29,21 @@ namespace ConsoleApp1
             {
                 Console.Write(character);
             }
+
+            Console.WriteLine();
+            Console.WriteLine(message.Contains('C'));
+
+            bool contains = false;
+
+            for (int i = 0; i < message.Length; i++)
+            {
+                if (message[i].Equals('a'))
+                {
+                    contains = true;
+                }
+            }
+
+            Console.WriteLine(contains);
 
 
             Console.ReadLine();
