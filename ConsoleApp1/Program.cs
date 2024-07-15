@@ -32,6 +32,7 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("Your passwords match");
                 }
+                // Else statement.
                 else
                 {
                     Console.WriteLine("Your passwords do not match");
