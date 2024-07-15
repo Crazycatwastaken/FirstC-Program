@@ -5,46 +5,25 @@ namespace ConsoleApp1
     class Program
     {
         static void Main(string[] args)
-        {
-            string message = "C# is awesome";
+        { 
+            Console.Write("What is your message: ");
+            string message = Console.ReadLine();
 
-            Console.WriteLine(message[0]); // Returns C
 
-            // int i = 0;
-            // while (i < message.Length)
-            // {
-            //     Console.Write(message[i]);
-            //     i++;
-            // }
-
-            Console.WriteLine();
-            for (int j = 0; j < message.Length; j++)
-            {
-                Console.Write(message[j]);
-                Thread.Sleep(50);
-            }
-
-            Console.WriteLine();
-            foreach (char character in message)
-            {
-                Console.Write(character);
-            }
-
-            Console.WriteLine();
-            Console.WriteLine(message.Contains('C'));
-
-            bool contains = false;
 
             for (int i = 0; i < message.Length; i++)
             {
-                if (message[i].Equals('a'))
-                {
-                    contains = true;
-                }
+                Console.Write(message[i]);
             }
 
-            Console.WriteLine(contains);
+            Console.WriteLine();
+            
+            for (int i = message.Length - 1; i >= 0; i--)
+            {
+                Console.Write(message[i]);
+            }
 
+            
 
             Console.ReadLine();
         }
