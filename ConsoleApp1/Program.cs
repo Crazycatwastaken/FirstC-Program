@@ -6,39 +6,28 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            // Sets empty password
-            string password = null;
-
-            // Runs this while password is empty.
-            while (string.IsNullOrEmpty(password))
-            {
-                Console.Write("Enter your password: ");
-                password = Console.ReadLine();
-                // Checks if this password is empty and promts the user to enter a password.
-                if (string.IsNullOrEmpty(password))
-                {
-                    Console.WriteLine("Please enter a password ");
-                }
-            }
-        
-            // Checks if this password is not empty
-            if (!string.IsNullOrEmpty(password))
-            {
-                // Asks to re-enter password
-                Console.Write("Please re-enter your password: ");
+            int[] numbers = new int[3];
             
-                // Checks if password is equal to the readline. (The password the user entered again)
-                if (password.Equals(Console.ReadLine()))
-                {
-                    Console.WriteLine("Your passwords match");
-                }
-                // Else statement.
-                else
-                {
-                    Console.WriteLine("Your passwords do not match");
-                }
-                Console.ReadLine();
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.Write("Enter a number: ");
+                numbers[i] = Convert.ToInt32(Console.ReadLine());
             }
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.Write($"{numbers[i]} ");
+            }
+
+            Console.WriteLine();
+            
+            foreach (var num in numbers)   
+            {
+                Console.Write($"{num}");
+            }
+            
+            Console.ReadLine();
+            
 
 
         }
