@@ -6,24 +6,16 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int[] numbers = new int[3];
+            int[] numbers = new[]
+            {
+                9, 129, 42
+            };
             
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                Console.Write("Enter a number: ");
-                numbers[i] = Convert.ToInt32(Console.ReadLine());
-            }
-
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                Console.Write($"{numbers[i]} ");
-            }
-
-            Console.WriteLine();
+            Array.Sort(numbers);
             
-            foreach (var num in numbers)   
+            foreach (var num in numbers)
             {
-                Console.Write($"{num}");
+                Console.WriteLine($"Your numbers are {num} ");
             }
             
             Console.ReadLine();
