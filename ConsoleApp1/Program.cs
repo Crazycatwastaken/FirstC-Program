@@ -8,24 +8,29 @@ namespace ConsoleApp1
         {
             int[] numbers = new[]
             {
-                0, 1, 2, 3, 4, 5
+                1, 2, 3
             };
-            Console.Write("What is your search? ");
-            int search = Convert.ToInt32(Console.ReadLine());
-            int positon = Array.IndexOf(numbers, search);
-            // int positon = Array.IndexOf(numbers, search, 2); Start index of 2
-            // int positon = Array.IndexOf(numbers, search, 1, 2); Search index from postions 1 and 2
 
-            if (positon > -1)
+            List<int> ListNumbers = new List<int>();
+
+            for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine($"Number {search} was found at postion {positon + 1}");
+                Console.Write("Enter a number: ");
+                ListNumbers.Add(Convert.ToInt32(Console.ReadLine()));
             }
-            else
+
+            for (int i = 0; i < ListNumbers.Count; i++)
             {
-                Console.WriteLine($"Number {search} has not be found");
+                Console.WriteLine(ListNumbers[i]);
             }
             
-            
+            ListNumbers.RemoveAt(0);
+
+            foreach (var numb in ListNumbers)
+            {
+                Console.WriteLine($"{numb}");
+            }
+
             Console.ReadLine();
             
 
