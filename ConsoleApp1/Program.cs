@@ -1,31 +1,39 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
+using System.Text;
+
 namespace ConsoleApp1
 {
 
-    class Test
-    { 
-        // Function outside program
-        public static void Something()
-        {
-            Console.WriteLine("Something");
-        }
-    }
+
     class Program
     {
         static void Main(string[] args)
         {
             WelcomeMessage();
-            Test.Something();
+            CreateAndPrintArrary();
             Console.ReadLine();
             
         }
 
-       // Function within program
+        static void CreateAndPrintArrary()
+        {
+            int[] numbers = new int[]
+            {
+                0, 1, 3
+            };
+
+            foreach (var item in numbers)
+            {
+                Console.WriteLine($"{item} ");
+            }
+        }
+
         static void WelcomeMessage()
         {
-            Console.WriteLine("Welcome Max");
+            Console.WriteLine("Wecome Message");
         }
+
     }
 }
