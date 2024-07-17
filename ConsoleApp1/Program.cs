@@ -12,21 +12,29 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.Title = returnName();
-            PrintIntro();
+            
+            int[] numbers = new int[3];
+            
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                
+                numbers[i] = EnterNumbers();
+            }
+
+            foreach (var items in numbers)
+            {
+                Console.WriteLine($"{items}");
+            }
+            
             Console.ReadLine();
             
         }
 
         // Returns variable from a function
-        static string returnName()
+        static int EnterNumbers()
         {
-            return "Bob";
-        }
-
-        static void PrintIntro()
-        {
-            Console.WriteLine(returnName());
+            Console.Write("Enter your number ");
+            return Convert.ToInt32(Console.ReadLine());
         }
 
 
