@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
+using System.Net.Sockets;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -14,15 +15,30 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            int result = Add(5);
-            Console.WriteLine(result);
+            string name = "Bob";
+            int age = 23;
+            string address = "Bob road 124";
+            
+            printDetails(name, age, address);
+            
+            // string nameInput = "Bob";
+            // int ageInput = 23;
+            // string addressInput = "Bob road 124";
+            //
+            // printDetails(age:ageInput,
+                        //  name: nameInput,
+                        //  address: addressInput);
+            // Otherway of using it without  being in the same order.
+            
             Console.ReadLine();
             
         }
-        
-        static int Add(int a,[Optional] int b) // Or int b = default / 0
+
+        static void printDetails(string name, int age, string address)
         {
-            return a + b;
+            Console.WriteLine($"Name: {name}");
+            Console.WriteLine($"Age: {age}");
+            Console.WriteLine($"Address: {address}");
         }
         
 
