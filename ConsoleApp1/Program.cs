@@ -12,30 +12,35 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            
-            int[] numbers = new int[3];
-            
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                
-                numbers[i] = EnterNumbers();
-            }
+            Console.WriteLine(Add(5, 5));
+            int num = Readint("Number");
+            Console.WriteLine(num);
 
-            foreach (var items in numbers)
-            {
-                Console.WriteLine($"{items}");
-            }
+            int angle = Readint("Angle");
+            Console.WriteLine(angle);
+
+            int firstNum = Readint("Enter first number: ");
+            int secondNum = Readint("Enter Second number: ");
+            int result = Add(firstNum, secondNum);
+            Console.WriteLine(result);
+
+            
             
             Console.ReadLine();
             
         }
 
-        // Returns variable from a function
-        static int EnterNumbers()
+        static int Readint(string message)
         {
-            Console.Write("Enter your number ");
+            Console.Write($"{message}");
             return Convert.ToInt32(Console.ReadLine());
         }
+
+        static int Add(int a, int b)
+        {
+            return a + b;
+        }
+        
 
 
     }
