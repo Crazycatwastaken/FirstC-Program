@@ -1,34 +1,67 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+
 namespace ConsoleApp1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int[] numbers = new[]
+            // var names = new Dictionary<int, string>()
+            // {
+            //     { 1, "Max" },
+            //     { 2, "Test" }
+            // };
+            //
+            //
+            // names.Add(3, "Testing");
+            //
+            // for (int i = 0; i < names.Count; i++)
+            // {
+            //     
+            //     var pair = names.ElementAt(i);
+            //     Console.WriteLine($"{pair.Key} - {pair.Value}");
+            // }
+            //
+            // foreach (var name in names)
+            // {
+            //     Console.Write(name);
+            //     Console.WriteLine($"{name.Key} - {name.Value}");
+            // }
+
+            var teachers = new Dictionary<string, string>()
             {
-                1, 2, 3
+                { "Math", "Max" },
+                { "Science", "box" }
             };
 
-            List<int> ListNumbers = new List<int>();
+            //Console.WriteLine(teachers["Math"]);
 
-            for (int i = 0; i < 3; i++)
+            if (teachers.TryGetValue("Math", out var teacher)) // places the output variable into teacher Can be out string teacher
             {
-                Console.Write("Enter a number: ");
-                ListNumbers.Add(Convert.ToInt32(Console.ReadLine()));
+                Console.WriteLine(teacher);
+
+                teachers["Math"] = "Joe";
+            }
+            else
+            {
+                Console.WriteLine("Teacher not found");
             }
 
-            for (int i = 0; i < ListNumbers.Count; i++)
+
+
+            if (teachers.ContainsKey("Math"))
             {
-                Console.WriteLine(ListNumbers[i]);
+                teachers.Remove("Math");
+            }
+            else
+            {
+                Console.WriteLine("math not found");
             }
             
-            ListNumbers.RemoveAt(0);
-
-            foreach (var numb in ListNumbers)
+            foreach (var name in teachers)
             {
-                Console.WriteLine($"{numb}");
+                Console.WriteLine($"{name.Key} - {name.Value}");
             }
 
             Console.ReadLine();
