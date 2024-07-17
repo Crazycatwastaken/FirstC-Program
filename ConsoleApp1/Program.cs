@@ -7,63 +7,40 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            // var names = new Dictionary<int, string>()
-            // {
-            //     { 1, "Max" },
-            //     { 2, "Test" }
-            // };
-            //
-            //
-            // names.Add(3, "Testing");
-            //
-            // for (int i = 0; i < names.Count; i++)
-            // {
-            //     
-            //     var pair = names.ElementAt(i);
-            //     Console.WriteLine($"{pair.Key} - {pair.Value}");
-            // }
-            //
-            // foreach (var name in names)
-            // {
-            //     Console.Write(name);
-            //     Console.WriteLine($"{name.Key} - {name.Value}");
-            // }
+            var even = new List<int>();
+            var odd = new List<int>();
+            int numbers;
 
-            var teachers = new Dictionary<string, string>()
+            Console.WriteLine("How many numbers: ");
+            numbers = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < numbers; i++)
             {
-                { "Math", "Max" },
-                { "Science", "box" }
-            };
-
-            //Console.WriteLine(teachers["Math"]);
-
-            if (teachers.TryGetValue("Math", out var teacher)) // places the output variable into teacher Can be out string teacher
-            {
-                Console.WriteLine(teacher);
-
-                teachers["Math"] = "Joe";
-            }
-            else
-            {
-                Console.WriteLine("Teacher not found");
+                if (i % 2 == 0)
+                {
+                    even.Add(i);
+                }
+                else
+                {
+                    odd.Add(i);
+                }
             }
 
+            Console.WriteLine("Even Numbers:");
 
-
-            if (teachers.ContainsKey("Math"))
+            foreach (var item in even)
             {
-                teachers.Remove("Math");
+                Console.Write($"{item} ");
             }
-            else
+
+            Console.WriteLine();
+            Console.WriteLine("Odd Numbers:");
+            
+            foreach (var item in odd)
             {
-                Console.WriteLine("math not found");
+                Console.Write($"{item} ");
             }
             
-            foreach (var name in teachers)
-            {
-                Console.WriteLine($"{name.Key} - {name.Value}");
-            }
-
             Console.ReadLine();
             
 
