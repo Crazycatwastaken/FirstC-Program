@@ -8,32 +8,27 @@ namespace ConsoleApp1
 
 
     class Program
+    
     {
         static void Main(string[] args)
         {
-            WelcomeMessage();
-            CreateAndPrintArrary();
+            Console.Title = returnName();
+            PrintIntro();
             Console.ReadLine();
             
         }
 
-        static void CreateAndPrintArrary()
+        // Returns variable from a function
+        static string returnName()
         {
-            int[] numbers = new int[]
-            {
-                0, 1, 3
-            };
-
-            foreach (var item in numbers)
-            {
-                Console.WriteLine($"{item} ");
-            }
+            return "Bob";
         }
 
-        static void WelcomeMessage()
+        static void PrintIntro()
         {
-            Console.WriteLine("Wecome Message");
+            Console.WriteLine(returnName());
         }
+
 
     }
 }
