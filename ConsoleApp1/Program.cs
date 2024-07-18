@@ -12,58 +12,36 @@ namespace ConsoleApp1
 
     class Program
     {
-        // struct Person
-        // {
-        //     public string name;
-        //     public int age;
-        //
-        //
-        //     public Person(string name, int age)
-        //     {
-        //         this.name = name;
-        //         this.age = age;
-        //     }
-        // }
-
         class Person
         {
             public string name;
             public int age;
-
-            public Person()
-            {
-
-            }
             public Person(string name, int age)
             {
                 this.name = name;
                 this.age = age;
             }
-            public Person(string name)
+
+            public string ReturnDetails()
             {
-                this.name = name;
-                this.age = -1;
-            }
-            public Person(int age)
-            {
-                this.name = "";
-                this.age = age;
+                return $"{name} {age}";
             }
         }
         static void Main(string[] args)
         {
             Person person = new Person("Max", 18);
-            Console.Write($"{person.name} {person.age}");
+            // Console.WriteLine(ReturnDetails(person));
+            Console.WriteLine(person.ReturnDetails());
             
             Console.ReadLine();
         }
 
-   
-  
-        
+        // static string ReturnDetails(Person person)
+        // {
+        //     return $"{person.name} {person.age}";
+        // }
 
- 
-        
+   
     }
 
 }
