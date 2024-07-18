@@ -16,23 +16,37 @@ namespace ConsoleApp1
         {
             int[] numbers = new int[]
             {
-                
+                1, 2, 3, 4, 5
             };
-            int Result = SumOfNumbers(ref numbers);
+            // int Result = SumOfNumbers(numbers, out int total);
+            //
+            // Console.WriteLine(Result > 0 ? total : "No numbers in array");
 
-            Console.WriteLine(Result > 0 ? Result : "No numbers in array");
+            Console.WriteLine(SumOfNumbers(numbers, out int total) == true ? total : "No numbers in arrary");
             Console.ReadLine();
           
         }
 
-        static int SumOfNumbers(ref int[] numbers)
+        // static int SumOfNumbers(int[] numbers)
+        // {
+        //     if (numbers.Length < 1)
+        //     {
+        //         return -1;
+        //     }
+        //
+        //     return numbers.Sum();
+        // }
+        
+        static bool SumOfNumbers(int[] numbers, out int total)
         {
             if (numbers.Length < 1)
             {
-                return -1;
+                total = 0;
+                return false;
             }
 
-            return numbers.Sum();
+            total = numbers.Sum();
+            return true;
         }
 
         
