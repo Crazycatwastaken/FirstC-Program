@@ -34,6 +34,11 @@ namespace ConsoleApp1
             {
 
             }
+            public Person(string name, int age)
+            {
+                this.name = name;
+                this.age = age;
+            }
             public Person(string name)
             {
                 this.name = name;
