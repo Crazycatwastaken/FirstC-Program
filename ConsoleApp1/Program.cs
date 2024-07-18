@@ -14,41 +14,25 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int[] numbers = new int[]
+            Console.Write("Enter a number: ");
+            try
             {
-                1, 2, 3, 4, 5
-            };
-            // int Result = SumOfNumbers(numbers, out int total);
-            //
-            // Console.WriteLine(Result > 0 ? total : "No numbers in array");
+                int num = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine(num);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                Console.WriteLine("Something has went wrong");
+               
+            }
 
-            Console.WriteLine(SumOfNumbers(numbers, out int total) == true ? total : "No numbers in arrary");
             Console.ReadLine();
           
         }
-
-        // static int SumOfNumbers(int[] numbers)
-        // {
-        //     if (numbers.Length < 1)
-        //     {
-        //         return -1;
-        //     }
-        //
-        //     return numbers.Sum();
-        // }
         
-        static bool SumOfNumbers(int[] numbers, out int total)
-        {
-            if (numbers.Length < 1)
-            {
-                total = 0;
-                return false;
-            }
 
-            total = numbers.Sum();
-            return true;
-        }
-
+ 
         
     }
 
