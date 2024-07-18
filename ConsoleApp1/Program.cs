@@ -12,41 +12,48 @@ namespace ConsoleApp1
 
     class Program
     {
-        struct Person
+        // struct Person
+        // {
+        //     public string name;
+        //     public int age;
+        //
+        //
+        //     public Person(string name, int age)
+        //     {
+        //         this.name = name;
+        //         this.age = age;
+        //     }
+        // }
+
+        class Person
         {
             public string name;
             public int age;
-            public int birthMonth;
 
-            public Person(string name, int age, int birthMonth)
+            public Person()
+            {
+
+            }
+            public Person(string name)
             {
                 this.name = name;
+                this.age = -1;
+            }
+            public Person(int age)
+            {
+                this.name = "";
                 this.age = age;
-                this.birthMonth = birthMonth;
             }
         }
         static void Main(string[] args)
         {
-            Person person = ReturnPerson();
-            Console.WriteLine($"{person.name} - {person.age} - {person.birthMonth}");
+            Person person = new Person("Max", 18);
+            Console.Write($"{person.name} {person.age}");
             
             Console.ReadLine();
         }
 
-        static Person ReturnPerson()
-        {
-            Console.Write("What is your name: ");
-            string name = Console.ReadLine();
-            
-            Console.Write("What is your age: ");
-            int age = Convert.ToInt32(Console.ReadLine());
-            
-            Console.Write("What is your month of birth: ");
-            int birthMonth = Convert.ToInt32(Console.ReadLine());
-            
-            return new Person(name, age, birthMonth);
-        }
-
+   
   
         
 
