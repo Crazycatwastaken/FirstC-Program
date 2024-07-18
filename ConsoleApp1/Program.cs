@@ -20,7 +20,7 @@ namespace ConsoleApp1
             };
             int Result = SumOfNumbers(ref numbers);
 
-            Console.WriteLine(Result > 1 ? Result : "No numbers in array");
+            Console.WriteLine(Result > 0 ? Result : "No numbers in array");
             Console.ReadLine();
           
         }
@@ -29,7 +29,7 @@ namespace ConsoleApp1
         {
             if (numbers.Length < 1)
             {
-                return 0;
+                return -1;
             }
 
             return numbers.Sum();
