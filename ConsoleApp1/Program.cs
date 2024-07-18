@@ -14,14 +14,34 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int num = 0;
-            test(out num);
-            Console.WriteLine(num);
+
+            var shoppingList = new List<string>
+            {
+                "Coffee", "Milk"
+            };
+
+            Console.WriteLine(shoppingList.IndexOf("Coffee"));
+            Console.WriteLine(findInList("Coffee", shoppingList, out int index));
+            Console.WriteLine(index);
+
             
             
             Console.ReadLine();
         }
 
+        static bool findInList(string search, List<string> list, out int index) // Passing in a string varable with whatever name, declaring a list variable nad writing out an int index.
+        {
+            index = -1;
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].ToLower().Equals(search.ToLower()))
+                {
+                    index = i;
+                }
+            }
+            return index > -1;
+        }
+        
         static void test(out int num)
         {
             num = 5;
