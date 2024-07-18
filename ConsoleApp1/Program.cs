@@ -14,22 +14,25 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.Write("What is the base of the triangle: ");
-            int Base = Convert.ToInt32(Console.ReadLine());
-            Console.Write("What is the height of the triangle: ");
-            int Height = Convert.ToInt32(Console.ReadLine());
-            
-            int result = AreaOfTriangle(Base, Height);
-            Console.WriteLine($"The area of the triangle {result}");
-          
+            int[] numbers = new int[]
+            {
+                
+            };
+            int Result = SumOfNumbers(ref numbers);
+
+            Console.WriteLine(Result > 1 ? Result : "No numbers in array");
             Console.ReadLine();
           
         }
 
-        static int AreaOfTriangle(int Base, int Height)
+        static int SumOfNumbers(ref int[] numbers)
         {
-            
-            return (Base * Height) / 2;
+            if (numbers.Length < 1)
+            {
+                return 0;
+            }
+
+            return numbers.Sum();
         }
 
         
