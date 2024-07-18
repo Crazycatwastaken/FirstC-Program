@@ -19,17 +19,17 @@ namespace ConsoleApp1
             Console.Write("What is the height of the triangle: ");
             int Height = Convert.ToInt32(Console.ReadLine());
             
-            double result = AreaOfTriangle(Base, Height);
+            int result = AreaOfTriangle(Base, Height);
             Console.WriteLine($"The area of the triangle {result}");
           
             Console.ReadLine();
           
         }
 
-        static double AreaOfTriangle(int Base, int Height)
+        static int AreaOfTriangle(int Base, int Height)
         {
             
-            return 0.5 * Base * Height;
+            return (Base * Height) / 2;
         }
 
         
