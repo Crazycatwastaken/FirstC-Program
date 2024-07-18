@@ -14,32 +14,19 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-
-            string name = "Bob";
-            int age = 23;
-            string address = "Bob road 124";
+            int num = 0;
+            test(out num);
+            Console.WriteLine(num);
             
-            printDetails(name, age, address);
-            
-            // string nameInput = "Bob";
-            // int ageInput = 23;
-            // string addressInput = "Bob road 124";
-            //
-            // printDetails(age:ageInput,
-                        //  name: nameInput,
-                        //  address: addressInput);
-            // Otherway of using it without  being in the same order.
             
             Console.ReadLine();
-            
         }
 
-        static void printDetails(string name, int age, string address)
+        static void test(out int num)
         {
-            Console.WriteLine($"Name: {name}");
-            Console.WriteLine($"Age: {age}");
-            Console.WriteLine($"Address: {address}");
+            num = 5;
         }
+
         
 
 
