@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
+using System.Linq.Expressions;
 using System.Net.Sockets;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -10,45 +11,28 @@ namespace ConsoleApp1
 
 
     class Program
-    
     {
         static void Main(string[] args)
         {
-
-            var shoppingList = new List<string>
-            {
-                "Coffee", "Milk"
-            };
-
-            Console.WriteLine(shoppingList.IndexOf("Coffee"));
-            Console.WriteLine(findInList("Coffee", shoppingList, out int index));
-            Console.WriteLine(index);
-
+            Console.Write("What is the base of the triangle: ");
+            int Base = Convert.ToInt32(Console.ReadLine());
+            Console.Write("What is the height of the triangle: ");
+            int Height = Convert.ToInt32(Console.ReadLine());
             
-            
+            double result = AreaOfTriangle(Base, Height);
+            Console.WriteLine($"The area of the triangle {result}");
+          
             Console.ReadLine();
+          
         }
 
-        static bool findInList(string search, List<string> list, out int index) // Passing in a string varable with whatever name, declaring a list variable nad writing out an int index.
+        static double AreaOfTriangle(int Base, int Height)
         {
-            index = -1;
-            for (int i = 0; i < list.Count; i++)
-            {
-                if (list[i].ToLower().Equals(search.ToLower()))
-                {
-                    index = i;
-                }
-            }
-            return index > -1;
-        }
-        
-        static void test(out int num)
-        {
-            num = 5;
+            
+            return 0.5 * Base * Height;
         }
 
         
-
-
     }
+
 }
