@@ -22,26 +22,14 @@ namespace ConsoleApp1
 
             public string Name
             {
-                get
-                {
-                    return name;
-                }
-                set
-                {
-                    name = value;
-                }
+                get => name;
+                set => name = value;
             }
 
             public int Age
             {
-                get
-                {
-                    return age;
-                }
-                set
-                {
-                    age = value;
-                }
+                get => age;
+                set => age = value;
             }
         }
         static void Main(string[] args)
