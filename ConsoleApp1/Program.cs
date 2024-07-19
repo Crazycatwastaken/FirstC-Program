@@ -12,31 +12,33 @@ namespace ConsoleApp1
     {
         class Person
         {
-            private string name;
-            private int age;
+            public string Name { get; set; }
+            public int Age { get; set; }
+
             public Person(string name, int age)
             {
-                this.name = name;
-                this.age = age;
+                Name = name;
+                Age = age;
             }
 
-            public string Name
-            {
-                get => name;
-                set => name = value;
-            }
-
-            public int Age
-            {
-                get => age;
-                set => age = value;
-            }
+            // public string Name
+            // {
+            //     get => name;
+            //     set => name = value;
+            // }
+            //
+            // public int Age
+            // {
+            //     get => age;
+            //     set => age = value;
+            // }
         }
         static void Main(string[] args)
         {
             Person person = new Person("Max", 18);
             person.Name = "Harry";
             Console.WriteLine($"{person.Name} - {person.Age}");
+            
             
             Console.ReadLine();
         }
