@@ -32,22 +32,28 @@ namespace ConsoleApp1
             //     get => age;
             //     set => age = value;
             // }
+
+            public override string ToString()
+            {
+                return $"Name: {Name}";
+            }
+            
         }
         static void Main(string[] args)
         {
             Person person = new Person("Max", 18);
+            var test = new Person("Max", 18)
             person.Name = "Harry";
-            Console.WriteLine($"{person.Name} - {person.Age}");
+
+            if (person.Equals(test))
+            {
+                Console.WriteLine("Same");
+            }
             
             
             Console.ReadLine();
         }
-
-        // static string ReturnDetails(Person person)
-        // {
-        //     return $"{person.name} {person.age}";
-        // }
-
+        
    
     }
 

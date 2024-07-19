@@ -1,0 +1,15 @@
+C:\Users\maxra\RiderProjects\ConsoleApp1\ConsoleApp1\bin\Release\net8.0\win-x86\ConsoleApp1.exe
+C:\Users\maxra\RiderProjects\ConsoleApp1\ConsoleApp1\bin\Release\net8.0\win-x86\ConsoleApp1.deps.json
+C:\Users\maxra\RiderProjects\ConsoleApp1\ConsoleApp1\bin\Release\net8.0\win-x86\ConsoleApp1.runtimeconfig.json
+C:\Users\maxra\RiderProjects\ConsoleApp1\ConsoleApp1\bin\Release\net8.0\win-x86\ConsoleApp1.dll
+C:\Users\maxra\RiderProjects\ConsoleApp1\ConsoleApp1\bin\Release\net8.0\win-x86\ConsoleApp1.pdb
+C:\Users\maxra\RiderProjects\ConsoleApp1\ConsoleApp1\obj\Release\net8.0\win-x86\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maxra\RiderProjects\ConsoleApp1\ConsoleApp1\obj\Release\net8.0\win-x86\ConsoleApp1.AssemblyInfoInputs.cache
+C:\Users\maxra\RiderProjects\ConsoleApp1\ConsoleApp1\obj\Release\net8.0\win-x86\ConsoleApp1.AssemblyInfo.cs
+C:\Users\maxra\RiderProjects\ConsoleApp1\ConsoleApp1\obj\Release\net8.0\win-x86\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\maxra\RiderProjects\ConsoleApp1\ConsoleApp1\obj\Release\net8.0\win-x86\ConsoleApp1.sourcelink.json
+C:\Users\maxra\RiderProjects\ConsoleApp1\ConsoleApp1\obj\Release\net8.0\win-x86\ConsoleApp1.dll
+C:\Users\maxra\RiderProjects\ConsoleApp1\ConsoleApp1\obj\Release\net8.0\win-x86\refint\ConsoleApp1.dll
+C:\Users\maxra\RiderProjects\ConsoleApp1\ConsoleApp1\obj\Release\net8.0\win-x86\ConsoleApp1.pdb
+C:\Users\maxra\RiderProjects\ConsoleApp1\ConsoleApp1\obj\Release\net8.0\win-x86\ConsoleApp1.genruntimeconfig.cache
+C:\Users\maxra\RiderProjects\ConsoleApp1\ConsoleApp1\obj\Release\net8.0\win-x86\ref\ConsoleApp1.dll
