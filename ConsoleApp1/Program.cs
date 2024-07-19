@@ -8,30 +8,47 @@ using System.Text;
 
 namespace ConsoleApp1
 {
-
-
     class Program
     {
         class Person
         {
-            public string name;
-            public int age;
+            private string name;
+            private int age;
             public Person(string name, int age)
             {
                 this.name = name;
                 this.age = age;
             }
 
-            public string ReturnDetails()
+            public string Name
             {
-                return $"{name} {age}";
+                get
+                {
+                    return name;
+                }
+                set
+                {
+                    name = value;
+                }
+            }
+
+            public int Age
+            {
+                get
+                {
+                    return age;
+                }
+                set
+                {
+                    age = value;
+                }
             }
         }
         static void Main(string[] args)
         {
             Person person = new Person("Max", 18);
-            // Console.WriteLine(ReturnDetails(person));
-            Console.WriteLine(person.ReturnDetails());
+            person.Name = "Harry";
+            Console.WriteLine($"{person.Name} - {person.Age}");
             
             Console.ReadLine();
         }
